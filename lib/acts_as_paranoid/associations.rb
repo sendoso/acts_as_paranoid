@@ -16,7 +16,7 @@ module ActsAsParanoid
         end
 
         with_deleted = options.delete(:with_deleted)
-        result = belongs_to_without_deleted(target, scope, options)
+        result = belongs_to_without_deleted(target, scope, **options)
 
         if with_deleted
           if result.is_a? Hash
